@@ -1,0 +1,63 @@
+﻿@page "/"
+
+<PageTitle>Fluent Divider Issue</PageTitle>
+
+<div class="cart-container">
+    <h5>This should have a vertical divider, but it doesn't show with "height: 100%":</h5>
+    <FluentCard>
+        <div class="d-flex flex-row align-items-center product-wrapper">
+            <div class="d-flex flex-column gap-2 description-area">
+                <h5>Product Name</h5>
+                <div>The is a product description</div>
+            </div>
+            <div style="position:relative">
+                <FluentDivider Orientation="Orientation.Vertical" Style="height: 100%;" Role="DividerRole.Separator" />
+            </div>
+            <div class="d-flex flex-column gap-2 align-items-center summary-area">
+                <div class="d-flex flex-row align-items-center justify-content-around width-100-percent">
+                    <div>$15.95 ea</div>
+                    <FluentIcon Icon="Icons.Regular.Size20.Delete" />
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-around width-100-percent">
+                    <div>Qty</div>
+                    <FluentNumberField @bind-Value=Quantity Style="width: 65px;" />
+                </div>
+                <div class="d-flex flex-row width-100-percent justify-content-center bold font-size-large">
+                    $15.95
+                </div>
+            </div>
+        </div>
+    </FluentCard>
+
+    <h5>This shows the vertical divider but only because I associated a fixed height:</h5>
+    <FluentCard>
+        <div class="d-flex flex-row align-items-center product-wrapper">
+            <div class="d-flex flex-column gap-2 description-area">
+                <h5>Product Name</h5>
+                <div>The is a product description</div>
+            </div>
+            <div style="position:relative">
+                <FluentDivider Orientation="Orientation.Vertical" Style="height: 75px;" Role="DividerRole.Separator" />
+            </div>
+            <div class="d-flex flex-column gap-2 align-items-center summary-area">
+                <div class="d-flex flex-row align-items-center justify-content-around width-100-percent">
+                    <div>$15.95 ea</div>
+                    <FluentIcon Icon="Icons.Regular.Size20.Delete" />
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-around width-100-percent">
+                    <div>Qty</div>
+                    <FluentNumberField @bind-Value=Quantity Style="width: 65px;" />
+                </div>
+                <div class="d-flex flex-row width-100-percent justify-content-center bold font-size-large">
+                    $15.95
+                </div>
+            </div>
+        </div>
+    </FluentCard>
+</div>
+
+
+
+@code {
+    private int Quantity = 1;
+}

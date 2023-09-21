@@ -1,0 +1,31 @@
+﻿.cart-container {
+    max-width: 500px;
+    padding-bottom: 30px;
+}
+
+    .cart-container ::deep fluent-card {
+        margin-bottom: 20px;
+    }
+
+.product-wrapper {
+    padding: 15px;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.description-area {
+    flex: 1 1 auto;
+}
+
+.summary-area {
+    flex: 0 0 auto;
+    width: 110px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.font-size-large {
+    font-size: 22px;
+}
